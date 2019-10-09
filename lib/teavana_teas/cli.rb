@@ -7,11 +7,13 @@ class TeavanaTeas::CLI
   end
   
   def scrape 
-    TeavanaTeas::Scraper.scrape_teas
+    TeavanaTeas::Scraper.scrape_tea_urls
   end
   
   def hello
     tea = TeavanaTeas::Teas.all
-    puts "#{tea}"
+    tea.each.with_index do |tea, i|
+    puts "#{i}. #{tea.name}"
+    end
   end
 end
