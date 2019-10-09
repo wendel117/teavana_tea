@@ -14,7 +14,8 @@ class TeavanaTeas::Scraper
     details = doc.css("div.hero-section-info_content")
     details.each do |details|
       details = TeavanaTeas::Details.new(details.h4.text, details.p.text.strip)
-    tea.tea_details << self   
+    tea.tea_details << self 
+    binding.pry
     end
   end
 end
