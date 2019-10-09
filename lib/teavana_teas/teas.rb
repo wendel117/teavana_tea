@@ -11,12 +11,12 @@ class TeavanaTeas::Teas
     @@all 
   end
   
-  def name
-    @name ||= doc.css("div.hero-section-info h1").text
-  end
+  # def name
+  #   @name ||= doc.css("div.hero-section-info h1").text
+  # end
 
-  def doc
-    @doc ||= Nokogiri::HTML(open(self.url))
-  end
+  # def doc
+  #   @doc ||= Nokogiri::HTML(open(self.url))
+  # end
 
 end
