@@ -12,15 +12,12 @@ class TeavanaTeas::Teas
     @@all 
   end
   
-  def get_details
-    TeavanaTeas::Scraper.scrape_tea_details(self) if @tea_details.empty?
-  end 
-  # def name
-  #   @name ||= doc.css("div.hero-section-info h1").text
-  # end
+  def name
+    @name ||= doc.css("div.hero-section-info h1").text
+  end
 
-  # def doc
-  #   @doc ||= Nokogiri::HTML(open(self.url))
-  # end
+  def doc
+    @doc ||= Nokogiri::HTML(open(self.url))
+  end
 
 end
