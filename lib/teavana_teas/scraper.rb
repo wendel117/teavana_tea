@@ -9,11 +9,12 @@ class TeavanaTeas::Scraper
     end
   end
   
-  def self.scrape_tea_details(url)
-    doc = Nokogiri::HTML(open(url))
+  def self.scrape_tea_details(tea)
+    doc = Nokogiri::HTML(open(tea.url))
     details = doc.css("div.hero-section-info_content")
     details.each do |details|
       details = TeavanaTeas::Details.new(details.h4.text, details.p.text.strip)
-    
-  
+    tea.tea_details << self   
+    end
+  end
 end
