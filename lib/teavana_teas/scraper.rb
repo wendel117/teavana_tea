@@ -6,9 +6,12 @@ class TeavanaTeas::Scraper
     teas.each do |tea|
       url = tea.css("a.tea-bottle-cta.cta-img").attr("href").value
       tea = TeavanaTeas::Teas.new(url)
-      #binding.pry
     end
   end
   
+  def self.scrape_tea_details(url)
+    doc = Nokogiri::HTML(open(url))
+    description = doc.css("p.custom-color").text
+    
   
 end
