@@ -1,6 +1,3 @@
-require "teavana_teas/version"
-
-module TeavanaTeas
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "teavana_teas/version"
+require_relative "teavana_teas/cli"
+require_relative "teavana_teas/teas"
