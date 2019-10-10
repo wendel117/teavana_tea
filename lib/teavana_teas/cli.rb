@@ -21,7 +21,6 @@ class TeavanaTeas::CLI
       intro
   end
 end
-  
     
   def scrape 
     TeavanaTeas::Scraper.scrape_teas

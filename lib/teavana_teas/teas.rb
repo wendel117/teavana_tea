@@ -1,5 +1,5 @@
 class TeavanaTeas::Teas
-  attr_accessor :name, :url, :details, :description
+  attr_accessor :name, :url, :details
   @@all = []
   
   def initialize(name, url)
@@ -16,12 +16,6 @@ class TeavanaTeas::Teas
   def add_details(details)
     self.details << details
   end
-  # def name
-  #   @name ||= doc.css("div.hero-section-info h1").text
-  # end
-
-  # def doc
-  #   @doc ||= Nokogiri::HTML(open(self.url))
-  # end
+ 
 
 end
