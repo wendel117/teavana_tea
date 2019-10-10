@@ -7,7 +7,7 @@ class TeavanaTeas::Scraper
       url = tea.css("a.tea-bottle-cta.cta-img").attr("href").value
       name = tea.css("h2.tea-bottle-title").text.strip
       tea = TeavanaTeas::Teas.new(name, url)
-      #binding.pry
+  
     end
   end
   
@@ -17,9 +17,8 @@ class TeavanaTeas::Scraper
     details.each do |detail|
       detail = TeavanaTeas::Details.new
       
-      detail.extra_info = doc.css("div.hero-section-info_content h2").text.strip
+      detail.extra_info = doc.css("div.hero-section-info_content h4").text.strip
       detail.description = doc.css("div.hero-section-info_content p").text.strip
-      
       tea.add_details(detail)
     
     end

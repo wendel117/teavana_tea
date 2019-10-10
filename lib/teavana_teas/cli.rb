@@ -25,7 +25,7 @@ class TeavanaTeas::CLI
     chosen_tea.details.each do |detail|
     puts "\n#{detail.description}"
     puts "\n#{detail.extra_info}"
-    binding.pry
+  
   end
   end
     
