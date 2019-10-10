@@ -19,8 +19,8 @@ class TeavanaTeas::CLI
     else 
       puts "Invaid entry."
       intro
+    end
   end
-end
     
   def scrape 
     TeavanaTeas::Scraper.scrape_teas
