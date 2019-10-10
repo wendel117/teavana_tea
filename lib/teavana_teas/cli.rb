@@ -22,8 +22,11 @@ class TeavanaTeas::CLI
     chosen_tea = @teas[index-1]
    
     TeavanaTeas::Scraper.scrape_tea_details(chosen_tea)
-    puts "\n#{chosen_tea.details}"
-    #binding.pry
+    chosen_tea.details.each do |detail|
+    puts "\n#{detail.description}"
+    puts "\n#{detail.extra_info}"
+    binding.pry
+  end
   end
     
   
