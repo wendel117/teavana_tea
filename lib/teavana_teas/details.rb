@@ -1,12 +1,12 @@
 class TeavanaTeas::Details 
-  attr_accessor :extra_info, :description, :tea
+  attr_accessor :extra_info, :description
   @@all = []
   
-  def initialize(extra_info, description)
-    @extra_info = extra_info
-    @description = description
-    @@all << self
-  end
+  # def initialize(extra_info, description)
+  #   @extra_info = extra_info
+  #   @description = description
+  #   @@all << self
+  # end
   
   def self.all 
     @@all 

@@ -1,11 +1,11 @@
 class TeavanaTeas::Teas
-  attr_accessor :name, :url, :extra_detail, :description
+  attr_accessor :name, :url, :details, :description
   @@all = []
   
   def initialize(name, url)
     @name = name
     @url = url
-    @tea_details = []
+    @details = []
     @@all << self
   end
   
@@ -14,8 +14,7 @@ class TeavanaTeas::Teas
   end
   
   def add_details(details)
-    self.tea_details << details
-    details.tea = self
+    self.details << details
   end
   # def name
   #   @name ||= doc.css("div.hero-section-info h1").text

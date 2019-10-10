@@ -20,10 +20,10 @@ class TeavanaTeas::CLI
   
   def show_tea_details(index)
     chosen_tea = @teas[index-1]
-    #binding.pry
+   
     TeavanaTeas::Scraper.scrape_tea_details(chosen_tea)
-    puts "\nBest Hike in #{chosen_tea.extra_info}"
-    puts "\n #{chosen_tea.description}"
+    puts "\n#{chosen_tea.details}"
+    #binding.pry
   end
     
   

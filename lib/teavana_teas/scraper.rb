@@ -15,10 +15,12 @@ class TeavanaTeas::Scraper
     doc = Nokogiri::HTML(open(tea.url))
     details = doc.css("div.hero-section-info_content")
     details.each do |detail|
-      extra_info = detail.css("h2").text.strip
-      description = detail.css("p").text.strip
-      tea_details = TeavanaTeas::Details.new(extra_info, description)
-  
+      detail = TeavanaTeas::Details.new
+      
+      detail.extra_info = doc.css("div.hero-section-info_content h2").text.strip
+      detail.description = doc.css("div.hero-section-info_content p").text.strip
+      
+      tea.add_details(detail)
     
     end
   end
