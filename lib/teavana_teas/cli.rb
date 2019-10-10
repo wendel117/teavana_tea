@@ -32,7 +32,7 @@ end
     puts "\n"
     @teas = TeavanaTeas::Teas.all
     @teas.each.with_index(1) do |tea, i|
-      puts "#{i}. #{tea.name}"
+      puts "#{i}. #{tea.name.gsub(/\s+/, '').gsub(/(?<=[a-z])(?=[A-Z])/, ' ')}"
     end 
   end
   
