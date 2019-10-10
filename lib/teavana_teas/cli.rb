@@ -1,10 +1,10 @@
 class TeavanaTeas::CLI 
   
   def call
-  puts "Hello World"
-  scrape
-  list_teas
-  menu
+    puts "Hello World"
+    scrape
+    list_teas
+    menu
   end
   
   def scrape 
@@ -19,16 +19,14 @@ class TeavanaTeas::CLI
   end
   
   def show_tea_details(index)
-    chosen_tea = @teas[index-1]
-   
-    TeavanaTeas::Scraper.scrape_tea_details(chosen_tea)
-    chosen_tea.details.each do |detail|
+    @chosen_tea = @teas[index-1]
+
+    TeavanaTeas::Scraper.scrape_tea_details(@chosen_tea)
+    @chosen_tea.details.each do |detail|
+    puts "\n#{@chosen_tea.name} #{detail.extra_info}:"
     puts "\n#{detail.description}"
-    puts "\n#{detail.extra_info}"
-  
+    end
   end
-  end
-    
   
   def menu
     input = nil 
