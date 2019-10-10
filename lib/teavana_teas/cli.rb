@@ -18,8 +18,7 @@ class TeavanaTeas::CLI
       list_teas
     else 
       puts "Invaid entry."
-      welcome
-    
+      intro
   end
 end
   
@@ -42,7 +41,7 @@ end
     TeavanaTeas::Scraper.scrape_tea_details(@chosen_tea)
     @chosen_tea.details.each do |detail|
     puts "\n-----------------------------------------------------"
-    puts "#{@chosen_tea.name} #{detail.extra_info.downcase}:"
+    puts "#{@chosen_tea.name.gsub(/\s+/, '').gsub(/(?<=[a-z])(?=[A-Z])/, ' ')} #{detail.extra_info.downcase}:"
     puts "\n#{detail.description}"
     puts "-----------------------------------------------------"
     end
