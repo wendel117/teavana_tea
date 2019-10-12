@@ -1,8 +1,6 @@
 # TeavanaTeas
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/teavana_teas`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to TeavanaTeas interactive tea selector. View a list of our iced tea blends and choose one to learn more and see if it's a match for your taste! Keep playing until you've viewed them all.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After you enter the executable file, ./bin/teavana-teas, you will see a Welcome message. After you have read this message, follow the instructions and type in and enter GO. Then you will see a list of teas. Once you have selected a tea from the list, type in and enter the number in front of that tea in the list. You will then see extra information about that tea. From here, you can either enter another tea number, "list" to view the list of teas again, or "exit" if you are finished to exit the program.
 
 ## Development
 
